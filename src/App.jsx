@@ -38,38 +38,38 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {/* Route hash scroll helper */}
-      <ScrollToTop />
+        {/* Route hash scroll helper */}
+        <ScrollToTop />
 
-      {/* Announcement Info Bar */}
-      <AnnouncementBar />
+        {/* Announcement Info Bar */}
+        <AnnouncementBar />
 
-      {/* Header layout navigation */}
-      <Header />
+        {/* Header layout navigation */}
+        <Header />
 
-      {/* Page Routing Outlet */}
-      <Outlet />
+        {/* Page Routing Outlet */}
+        <Outlet />
 
-      {/* Footer layout mapping */}
-      <Footer />
+        {/* Footer layout mapping */}
+        <Footer />
 
-      {/* Floating callbacks tab */}
-      <CallbackTab />
+        {/* Floating callbacks tab */}
+        <CallbackTab />
 
-      {/* WhatsApp bubble chat */}
-      <WhatsappBtn />
+        {/* WhatsApp bubble chat */}
+        <WhatsappBtn />
 
-      {/* Back to top reactive pointer */}
-      <button
-        className={clsx('back-to-top', { visible: backToTopVisible })}
-        id="backToTop"
-        aria-label="Back to top"
-        onClick={scrollToTop}
-      >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <polyline points="18 15 12 9 6 15" />
-        </svg>
-      </button>
-    </div>
+        {/* Back to top reactive pointer */}
+        <button
+          className={clsx('back-to-top', { visible: backToTopVisible })}
+          id="backToTop"
+          aria-label="Back to top"
+          onClick={scrollToTop}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+        </button>
+      </div>
   );
 }

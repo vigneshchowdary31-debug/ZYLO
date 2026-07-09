@@ -1,20 +1,14 @@
 import React from 'react';
-import { hydrateRoot, createRoot } from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
+import { ViteReactSSG } from 'vite-react-ssg';
 import { HelmetProvider } from 'react-helmet-async';
-import { router } from './routes';
+import { routes } from './routes';
 
-const rootElement = document.getElementById('root');
-const AppTree = (
-  <React.StrictMode>
-    <HelmetProvider>
-      <RouterProvider router={router} />
-    </HelmetProvider>
-  </React.StrictMode>
+export const createRoot = ViteReactSSG(
+  {
+    routes,
+    basename: '/',
+  },
+  ({ router }) => {
+    // If you need to do something with the router before rendering
+  }
 );
-
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, AppTree);
-} else {
-  createRoot(rootElement).render(AppTree);
-}

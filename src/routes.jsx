@@ -52,88 +52,81 @@ const LoadingFallback = () => (
   </div>
 );
 
-export const router = createBrowserRouter([
+export const routes = [
   {
     path: '/',
     element: <App />,
-   children: [
-  {
-    index: true,
-    element: (
-      <Suspense fallback={<LoadingFallback />}>
-        <Home />
-      </Suspense>
-    )
-  },
-
-  {
-    path: 'about',
-    element: (
-      <Suspense fallback={<LoadingFallback />}>
-        <About />
-      </Suspense>
-    )
-  },
-
-  {
-    path: 'corporate-events',
-    element: (
-      <Suspense fallback={<LoadingFallback />}>
-        <CorporateEvents />
-      </Suspense>
-    )
-  },
-
-  {
-    path: 'gallery',
-    element: (
-      <Suspense fallback={<LoadingFallback />}>
-        <Gallery />
-      </Suspense>
-    )
-  },
-
-  {
-    path: 'blog',
-    element: (
-      <Suspense fallback={<LoadingFallback />}>
-        <Blog />
-      </Suspense>
-    )
-  },
-
-  {
-    path: 'contact',
-    element: (
-      <Suspense fallback={<LoadingFallback />}>
-        <Contact />
-      </Suspense>
-    )
-  },
-
-  {
-    path: 'admin-login',
-    element: (
-      <Suspense fallback={<LoadingFallback />}>
-        <AdminLogin />
-      </Suspense>
-    )
-  },
-  {
-  path: 'admin',
-  element: (
-    <ProtectedRoute>
-      <Suspense fallback={<LoadingFallback />}>
-        <Admin />
-      </Suspense>
-    </ProtectedRoute>
-  )
-},
-
-  {
-    path: '*',
-    element: <Navigate to="/" replace />
+    children: [
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <Home />
+          </Suspense>
+        )
+      },
+      {
+        path: 'about',
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <About />
+          </Suspense>
+        )
+      },
+      {
+        path: 'corporate-events',
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <CorporateEvents />
+          </Suspense>
+        )
+      },
+      {
+        path: 'gallery',
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <Gallery />
+          </Suspense>
+        )
+      },
+      {
+        path: 'blog',
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <Blog />
+          </Suspense>
+        )
+      },
+      {
+        path: 'contact',
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <Contact />
+          </Suspense>
+        )
+      },
+      {
+        path: 'admin-login',
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <AdminLogin />
+          </Suspense>
+        )
+      },
+      {
+        path: 'admin',
+        element: (
+          <ProtectedRoute>
+            <Suspense fallback={<LoadingFallback />}>
+              <Admin />
+            </Suspense>
+          </ProtectedRoute>
+        )
+      },
+      {
+        path: '*',
+        element: <Navigate to="/" replace />
+      }
+    ]
   }
-]
-  }
-]);
+];
