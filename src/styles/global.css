@@ -3723,3 +3723,8 @@ input, textarea, select { font-family: inherit; }
     height: 24px !important;
   }
 }
+/* Fix LCP SSR Delay for Swiper */
+.swiper:not(.swiper-initialized) .swiper-slide:first-child {
+  opacity: 1 !important;
+}
+

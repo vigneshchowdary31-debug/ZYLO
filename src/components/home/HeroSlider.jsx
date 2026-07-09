@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import Button from '../shared/Button';
@@ -123,6 +124,9 @@ export default function HeroSlider() {
 
   return (
     <section className="hero-section" aria-label="Hero — Premier Corporate Event Management Hyderabad">
+      <Helmet>
+        <link rel="preload" as="image" href={heroSlides[0].bgImage} fetchpriority="high" />
+      </Helmet>
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
