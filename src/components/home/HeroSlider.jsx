@@ -1,13 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import Button from '../shared/Button';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
 
 const heroSlides = [
   {
@@ -88,11 +81,25 @@ const heroSlides = [
 ];
 
 export default function HeroSlider() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Autoplay functionality
   useEffect(() => {
-    // Dynamic Stats Count Animation
+    const interval = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Stats Number Animation
+  useEffect(() => {
     const animateStats = () => {
       const stats = document.querySelectorAll('.stat strong');
       stats.forEach((el) => {
+        // Prevent re-animating if already processed
+        if (el.dataset.animated === 'true') return;
+        el.dataset.animated = 'true';
+
         const text = el.textContent;
         const num = parseFloat(text.replace(/[^\d.]/g, ''));
         const suffix = text.replace(/[\d.]/g, '');
@@ -104,7 +111,6 @@ export default function HeroSlider() {
         const step = (timestamp) => {
           if (!startTimestamp) startTimestamp = timestamp;
           const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-          // easeOutExpo
           const easedProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
           const current = 0 + num * easedProgress;
 
@@ -117,7 +123,6 @@ export default function HeroSlider() {
       });
     };
 
-    // Delay slightly to wait for render
     const timer = setTimeout(animateStats, 300);
     return () => clearTimeout(timer);
   }, []);
@@ -127,27 +132,27 @@ export default function HeroSlider() {
       <Helmet>
         <link rel="preload" as="image" href={heroSlides[0].bgImage} fetchpriority="high" />
       </Helmet>
-      <Swiper
-        modules={[Autoplay, EffectFade, Pagination]}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
-        loop={true}
-        speed={1200}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: false
-        }}
-        pagination={{
-          el: '.hero-pagination',
-          clickable: true
-        }}
-        grabCursor={true}
-        className="mySwiper"
-      >
-        {heroSlides.map((slide, index) => (
-          <SwiperSlide key={slide.id}>
-            <div className="hero-slide">
+      
+      <div className="custom-swiper-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100vh', overflow: 'hidden' }}>
+        {heroSlides.map((slide, index) => {
+          const isActive = index === activeIndex;
+          
+          return (
+            <div 
+              key={slide.id}
+              className={`hero-slide ${isActive ? 'active-slide' : ''}`}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                opacity: isActive ? 1 : 0,
+                visibility: isActive ? 'visible' : 'hidden',
+                transition: 'opacity 1.2s ease-in-out, visibility 1.2s ease-in-out',
+                zIndex: isActive ? 1 : 0
+              }}
+            >
               <img
                 src={slide.bgImage}
                 alt={slide.badge}
@@ -168,6 +173,7 @@ export default function HeroSlider() {
               <div className="hero-overlay"></div>
               <div className="hero-particles"></div>
               <div className="hero-content container">
+                {/* Rely on CSS for animations */}
                 <div className="hero-badge animate-fade-up">
                   <span className="badge-dot"></span> {slide.badge}
                 </div>
@@ -198,18 +204,48 @@ export default function HeroSlider() {
                 </div>
               </div>
             </div>
-          </SwiperSlide>
+          );
+        })}
+      </div>
+
+      {/* Bullet Pagination */}
+      <div 
+        className="hero-pagination" 
+        style={{ 
+          position: 'absolute', 
+          bottom: '40px', 
+          left: '0', 
+          width: '100%', 
+          display: 'flex', 
+          justifyContent: 'center', 
+          gap: '12px', 
+          zIndex: 10 
+        }}
+      >
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            style={{
+              width: index === activeIndex ? '32px' : '10px',
+              height: '10px',
+              borderRadius: '6px',
+              background: index === activeIndex ? 'var(--brand, #3B82F6)' : 'rgba(255,255,255,0.6)',
+              border: 'none',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+              padding: 0
+            }}
+          />
         ))}
+      </div>
 
-        {/* Bullet Pagination */}
-        <div className="swiper-pagination hero-pagination"></div>
-
-        {/* Scroll Indicator */}
-        <div className="hero-scroll-indicator">
-          <div className="scroll-line"></div>
-          <span>Scroll</span>
-        </div>
-      </Swiper>
+      {/* Scroll Indicator */}
+      <div className="hero-scroll-indicator" style={{ zIndex: 10 }}>
+        <div className="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
     </section>
   );
 }
