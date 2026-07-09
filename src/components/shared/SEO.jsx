@@ -9,7 +9,7 @@ export default function SEO({
   description = "Premier Corporate Event Management & Exhibition Organizers Hyderabad", 
   path = "", 
   schemaData = [],
-  image = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80",
+  image = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=75&auto=format",
   type = "website",
   noindex = false
 }) {

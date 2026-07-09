@@ -35,9 +35,11 @@ export default function AboutSection() {
         <div className="about-visual reveal">
           <div className="about-img-frame">
             <img
-              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=80"
+              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=75&auto=format"
               alt="Professional event management team at work — Zylo Events Hyderabad"
               loading="lazy"
+              width="600"
+              height="400"
               className="about-img"
             />
             <div className="about-circle-deco c1"></div>

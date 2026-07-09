@@ -41,7 +41,7 @@ export default function Gallery() {
         {/* Inner Hero */}
         <section
           className="inner-hero"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=80')` }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=75&auto=format')` }}
         >
           <div className="inner-hero-overlay"></div>
           <div className="container inner-hero-content">
@@ -84,7 +84,7 @@ export default function Gallery() {
         }
       }}
     >
-      <img loading="lazy" src={item.src}
+      <img width="800" height="533" loading="lazy" src={item.src}
         alt={item.alt}
         style={{
           width: '100%',
@@ -148,7 +148,7 @@ export default function Gallery() {
             >
               ✕
             </button>
-            <img loading="lazy" src={activeImg.src}
+            <img width="800" height="533" loading="lazy" src={activeImg.src}
               alt={activeImg.alt}
               style={{
                 maxWidth: '90vw',
@@ -166,7 +166,7 @@ export default function Gallery() {
         <section
           className="cta-banner"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=75&auto=format')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}

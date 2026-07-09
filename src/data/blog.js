@@ -14,7 +14,7 @@ export const blogPosts = [
     categoryLabel: 'Corporate Events',
     date: 'May 15, 2026',
     author: 'Zylo Editorial',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=75&auto=format',
     excerpt: 'Planning a large-scale corporate conference can be daunting. From selecting the perfect venue in Banjara Hills to managing state-of-the-art AV equipment, here is your ultimate checklist for success.'
   },
   {
@@ -24,7 +24,7 @@ export const blogPosts = [
     categoryLabel: 'Trade Shows',
     date: 'April 28, 2026',
     author: 'Stall Design Team',
-    image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=75&auto=format',
     excerpt: 'Your exhibition stall is your brand\'s physical handshake at a trade show. Learn how award-winning stall fabricators use structure, lighting, and interactivity to draw crowds and stand out.'
   },
   {
@@ -34,7 +34,7 @@ export const blogPosts = [
     categoryLabel: 'Corporate Events',
     date: 'March 12, 2026',
     author: 'Creative Director',
-    image: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=75&auto=format',
     excerpt: 'A successful product launch creates momentum and drives initial sales. We break down the elements of high-impact reveals, from immersive projection mapping to VIP hospitality and media sets.'
   },
   {
@@ -44,7 +44,7 @@ export const blogPosts = [
     categoryLabel: 'Team Building',
     date: 'February 20, 2026',
     author: 'HR Specialist',
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=75&auto=format',
     excerpt: 'Strengthen team bonds outside the office walls. Discover Zylo\'s top-rated team-building activities and retreat destinations around Hyderabad that promote collaboration, trust, and fun.'
   },
   {
@@ -54,7 +54,7 @@ export const blogPosts = [
     categoryLabel: 'Award Ceremonies',
     date: 'January 10, 2026',
     author: 'Logistics Lead',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=75&auto=format',
     excerpt: 'Award nights celebrate the highest achievements. Discover our secret recipe for run-of-show timing, host rehearsals, prestige red-carpet lighting, and stage reveals that leave attendees in awe.'
   },
   {
@@ -64,7 +64,7 @@ export const blogPosts = [
     categoryLabel: 'Trade Shows',
     date: 'December 05, 2025',
     author: 'Experiential Strategist',
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=75&auto=format',
     excerpt: 'Explore the future of brand activations with immersive technologies like AR, VR, and kinetic displays that leave lasting impressions.'
   },
   {
@@ -74,7 +74,7 @@ export const blogPosts = [
     categoryLabel: 'Team Building',
     date: 'November 18, 2025',
     author: 'HR Specialist',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=75&auto=format',
     excerpt: 'Boost team morale with these interactive and engaging activities tailored for corporate groups of all sizes.'
   },
   {
@@ -84,7 +84,7 @@ export const blogPosts = [
     categoryLabel: 'Award Ceremonies',
     date: 'October 22, 2025',
     author: 'Logistics Lead',
-    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&q=75&auto=format',
     excerpt: 'A comprehensive guide to planning, executing, and hosting memorable corporate award ceremonies that honor your best talent.'
   }
 ];

@@ -43,7 +43,7 @@ export default function CorporateEvents() {
         {/* Inner Hero */}
         <section
           className="inner-hero"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=80')` }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=75&auto=format')` }}
         >
           <div className="inner-hero-overlay"></div>
           <div className="container inner-hero-content">
@@ -98,9 +98,11 @@ export default function CorporateEvents() {
             </div>
             <div className="reveal">
               <img
-                src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80"
+                src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=75&auto=format"
                 alt="Corporate event conference hall"
                 loading="lazy"
+                width="800"
+                height="533"
                 className="story-img"
               />
             </div>
@@ -125,6 +127,8 @@ export default function CorporateEvents() {
                       src={service.image}
                       alt={service.title}
                       loading="lazy"
+                      width="800"
+                      height="533"
                       className="service-detail-img"
                     />
                   </div>
@@ -158,6 +162,8 @@ export default function CorporateEvents() {
                       src={service.image}
                       alt={service.title}
                       loading="lazy"
+                      width="800"
+                      height="533"
                       className="service-detail-img"
                     />
                   </div>
@@ -295,7 +301,7 @@ export default function CorporateEvents() {
         <section
           className="cta-banner"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=75&auto=format')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}

@@ -56,7 +56,7 @@ console.log(filteredPosts);
         {/* Inner Hero */}
         <section
           className="inner-hero"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1600&q=80')` }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1600&q=75&auto=format')` }}
         >
           <div className="inner-hero-overlay"></div>
           <div className="container inner-hero-content">
@@ -184,7 +184,7 @@ console.log(filteredPosts);
                           className="blog-card-img-wrap"
                           style={{ overflow: 'hidden', height: '200px', position: 'relative' }}
                         >
-                          <img loading="lazy" key={`${activeCategory}-${post.id}`}
+                          <img width="800" height="533" loading="lazy" key={`${activeCategory}-${post.id}`}
                             src={post.image}
                             alt={post.title}
                             style={{
@@ -371,7 +371,7 @@ console.log(filteredPosts);
         <section
           className="cta-banner"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=75&auto=format')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}

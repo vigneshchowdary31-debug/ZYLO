@@ -66,7 +66,7 @@ export default function Contact() {
         {/* Inner Hero */}
         <section
           className="inner-hero"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80')` }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=75&auto=format')` }}
         >
           <div className="inner-hero-overlay"></div>
           <div className="container inner-hero-content">
@@ -263,7 +263,7 @@ export default function Contact() {
         <section
           className="cta-banner"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=75&auto=format')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}

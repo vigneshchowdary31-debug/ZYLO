@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 const heroSlides = [
   {
     id: 1,
-    bgImage: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=75&auto=format',
     badge: 'A Brand by Alankaran | Since 2011',
     title: <>Crafting Experiential Events<br/>&amp; <span>Corporate Productions</span><br/>Since 2011</>,
     subtitle: 'Zylo Events, the corporate and experiential events wing of Alankaran, designs state-of-the-art brand activations, conferences, and luxury corporate retreats.',
@@ -26,7 +26,7 @@ const heroSlides = [
   },
   {
     id: 2,
-    bgImage: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1600&q=75&auto=format',
     badge: 'Luxury Brand Activations & Installations',
     title: <>Experiential Installations<br/>&amp; <span>Brand Activations</span><br/>That Command Attention</>,
     subtitle: 'Bespoke experiential design, high-end fabrication, and custom brand activations powered by the legacy and creative vision of Alankaran.',
@@ -41,7 +41,7 @@ const heroSlides = [
   },
   {
     id: 3,
-    bgImage: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=1600&q=75&auto=format',
     badge: 'Corporate Product Launches & Reveals',
     title: <>Product Launch Events<br/>That Build <span>Brand Legacies</span></>,
     subtitle: 'Creating high-impact sensory experiences, product reveals, and luxury immersive setups that position your brand at the absolute pinnacle of your industry.',
@@ -56,7 +56,7 @@ const heroSlides = [
   },
   {
     id: 4,
-    bgImage: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1600&q=75&auto=format',
     badge: 'Conferences & MICE Global Logistics',
     title: <>Premium Corporate Conferences<br/>&amp; <span>MICE Experiences</span></>,
     subtitle: 'Seamless execution, international standard technical operations, and immersive delegate experiences delivered pan-India since 2011.',
@@ -71,7 +71,7 @@ const heroSlides = [
   },
   {
     id: 5,
-    bgImage: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80',
+    bgImage: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=75&auto=format',
     badge: 'Corporate Retreats & Award Ceremonies',
     title: <>High-End Corporate Retreats<br/>&amp; <span>Awards Ceremonies</span></>,
     subtitle: 'Transformative executive experiences, dealer summits, and award ceremonies designed to celebrate excellence and foster lasting professional bonds.',
@@ -141,12 +141,26 @@ export default function HeroSlider() {
         grabCursor={true}
         className="mySwiper"
       >
-        {heroSlides.map((slide) => (
+        {heroSlides.map((slide, index) => (
           <SwiperSlide key={slide.id}>
-            <div
-              className="hero-slide"
-              style={{ backgroundImage: `url('${slide.bgImage}')` }}
-            >
+            <div className="hero-slide">
+              <img
+                src={slide.bgImage}
+                alt={slide.badge}
+                className="hero-bg-image"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  zIndex: -1
+                }}
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchpriority={index === 0 ? "high" : "auto"}
+                decoding="async"
+              />
               <div className="hero-overlay"></div>
               <div className="hero-particles"></div>
               <div className="hero-content container">

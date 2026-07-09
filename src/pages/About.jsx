@@ -10,7 +10,7 @@ import Button from '../components/shared/Button';
 //   {
 //     name: 'Chaitanya Kulkarni',
 //     role: 'Co-Founder & CEO',
-//     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
+//     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=75&auto=format',
 //     bio: 'A visionary corporate strategist and experiential pioneer with 18+ years of legacy. Former Director of Operations for premium global events groups, Chaitanya co-founded Zylo in 2011 to bring scale and absolute precision to corporate events.',
 //     traits: ['Corporate Strategy', 'Scale & Precision'],
 //     linkedin: '#'
@@ -18,7 +18,7 @@ import Button from '../components/shared/Button';
 //   {
 //     name: 'Chandrika Ganji',
 //     role: 'Co-Founder & Creative Director',
-//     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
+//     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=75&auto=format',
 //     bio: 'A highly acclaimed spatial designer and luxury brand architect. Chandrika transforms physical environments into breathtaking, immersive sensory brand spaces, leading Zylo\'s experiential creative wing.',
 //     traits: ['Spatial Architect', 'Luxury Design'],
 //     linkedin: '#'
@@ -26,7 +26,7 @@ import Button from '../components/shared/Button';
 //   {
 //     name: 'Arun Mehta',
 //     role: 'Operations Head',
-//     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+//     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=75&auto=format',
 //     bio: 'Logistics genius and master of AV production who ensures that Zylo\'s complex staging and mega-scale corporate logistics are executed with flawless precision.',
 //     traits: ['AV Production', 'Logistics Master'],
 //     linkedin: '#'
@@ -34,7 +34,7 @@ import Button from '../components/shared/Button';
 //   {
 //     name: 'Neha Patel',
 //     role: 'Client Relations',
-//     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
+//     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=75&auto=format',
 //     bio: 'The heartbeat of our client relations, Neha manages key corporate accounts for over 15 Fortune 500 brands, translating corporate objectives into flawless execution plans.',
 //     traits: ['Client Success', 'Enterprise Lead'],
 //     linkedin: '#'
@@ -211,7 +211,7 @@ const fetchEmployees = async () => {
         {/* Inner Hero */}
         <section
           className="inner-hero"
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=80')` }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&q=75&auto=format')` }}
         >
           <div className="inner-hero-overlay"></div>
           <div className="container inner-hero-content">
@@ -286,8 +286,8 @@ const fetchEmployees = async () => {
               </Button>
             </div>
             <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              <img
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
+              <img width="800" height="533"
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=75&auto=format"
                 alt="Zylo Events team collaboration"
                 loading="lazy"
                 className="story-img"
@@ -383,10 +383,10 @@ const fetchEmployees = async () => {
                   <div className="avatar-container">
                     <div className="avatar-ring"></div>
                     <div className="avatar-image-wrapper">
-                      <img
+                      <img width="800" height="533"
                         src={
                               member.image ||
-                              'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80'
+                              'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=75&auto=format'
                             }
                         alt={`${member.name}, ${member.role}`}
                         loading="lazy"
@@ -440,12 +440,12 @@ const fetchEmployees = async () => {
               {zyloDifferences.map((item, idx) => {
                 // Array of high-quality event images for each card
                 const images = [
-                  'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80', // Industry Excellence (Elegant corporate event)
-                  'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&q=80', // Event Execution (Production setup)
-                  'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80', // Pan-India (City Skyline)
-                  'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80', // Bespoke / Experiential
-                  'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80', // Enterprises (Corporate meeting)
-                  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80'  // On-ground Support (Team working)
+                  'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=75&auto=format', // Industry Excellence (Elegant corporate event)
+                  'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&q=75&auto=format', // Event Execution (Production setup)
+                  'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=75&auto=format', // Pan-India (City Skyline)
+                  'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=75&auto=format', // Bespoke / Experiential
+                  'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=75&auto=format', // Enterprises (Corporate meeting)
+                  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=75&auto=format'  // On-ground Support (Team working)
                 ];
                 
                 return (
@@ -471,7 +471,7 @@ const fetchEmployees = async () => {
         <section
           className="cta-banner"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=75&auto=format')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}

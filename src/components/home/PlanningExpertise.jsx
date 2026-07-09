@@ -6,7 +6,7 @@ const expertiseCards = [
   {
     title: 'Corporate Conferences',
     desc: 'World-class AV, expert logistics',
-    bg: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80',
+    bg: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=75&auto=format',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -18,7 +18,7 @@ const expertiseCards = [
   {
     title: 'Product Launches',
     desc: 'Make your brand unforgettable',
-    bg: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
+    bg: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=75&auto=format',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -28,7 +28,7 @@ const expertiseCards = [
   {
     title: 'Award Ceremonies',
     desc: 'Recognise excellence in style',
-    bg: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80',
+    bg: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=75&auto=format',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="12" cy="8" r="6" />
@@ -39,7 +39,7 @@ const expertiseCards = [
   {
     title: 'Team Outing & Dealer Meets',
     desc: 'Unite, energise, inspire your team',
-    bg: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
+    bg: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=75&auto=format',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -52,7 +52,7 @@ const expertiseCards = [
   {
     title: 'Inaugurations & Ceremonies',
     desc: 'Opening & ground breaking events',
-    bg: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80',
+    bg: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=75&auto=format',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -65,7 +65,7 @@ const expertiseCards = [
   {
     title: 'Trade Shows & Exhibitions',
     desc: 'Exhibitions that command attention',
-    bg: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80',
+    bg: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=75&auto=format',
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <rect x="1" y="3" width="15" height="13" />
