@@ -41,6 +41,25 @@ export default function Contact() {
       <SEO
         title="Collaborate with Zylo Events — Get an Experiential Proposal"
         description="Connect with Zylo Events, a brand by Alankaran, to discuss your next brand activation, corporate conference, trade show stall, or luxury retreat."
+        path="/contact"
+        schemaData={[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zylo.events/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://zylo.events/contact"
+    }
+  ]
+}]}
       />
 
       <main>

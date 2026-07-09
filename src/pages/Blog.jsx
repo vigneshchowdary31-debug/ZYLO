@@ -31,6 +31,25 @@ console.log(filteredPosts);
       <SEO
         title="Event Strategy &amp; Experiential Marketing Insights | Zylo Events"
         description="Explore the latest event design, strategic B2B brand activation trends, global MICE logistics, and corporate event management insights from Zylo Events."
+        path="/blog"
+        schemaData={[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zylo.events/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://zylo.events/blog"
+    }
+  ]
+}]}
       />
 
       <main>
@@ -165,8 +184,7 @@ console.log(filteredPosts);
                           className="blog-card-img-wrap"
                           style={{ overflow: 'hidden', height: '200px', position: 'relative' }}
                         >
-                          <img
-                            key={`${activeCategory}-${post.id}`}
+                          <img loading="lazy" key={`${activeCategory}-${post.id}`}
                             src={post.image}
                             alt={post.title}
                             style={{

@@ -16,6 +16,25 @@ export default function Gallery() {
       <SEO
         title="Experiential Showcase &amp; Portfolio | Zylo Events"
         description="Browse our experiential event portfolio. View premium brand activations, massive trade show stalls, corporate conferences, and high-end retreats executed across India since 2011."
+        path="/gallery"
+        schemaData={[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zylo.events/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Gallery",
+      "item": "https://zylo.events/gallery"
+    }
+  ]
+}]}
       />
 
       <main>
@@ -65,8 +84,7 @@ export default function Gallery() {
         }
       }}
     >
-      <img
-        src={item.src}
+      <img loading="lazy" src={item.src}
         alt={item.alt}
         style={{
           width: '100%',
@@ -130,8 +148,7 @@ export default function Gallery() {
             >
               ✕
             </button>
-            <img
-              src={activeImg.src}
+            <img loading="lazy" src={activeImg.src}
               alt={activeImg.alt}
               style={{
                 maxWidth: '90vw',

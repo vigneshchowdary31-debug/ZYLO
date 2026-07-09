@@ -186,6 +186,25 @@ const fetchEmployees = async () => {
       <SEO
         title="Our Story — Premium Experiential Design Since 2011 | Zylo Events"
         description="Learn about Zylo Events — the corporate and experiential events wing of Alankaran, delivering premium corporate events, conferences, and brand activations since 2011."
+        path="/about"
+        schemaData={[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zylo.events/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://zylo.events/about"
+    }
+  ]
+}]}
       />
 
       <main className="about-page">

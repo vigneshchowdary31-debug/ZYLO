@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { createHashRouter, Navigate } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import App from './App';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -52,7 +52,7 @@ const LoadingFallback = () => (
   </div>
 );
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,

@@ -16,8 +16,22 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Zylo Events — Corporate &amp; Experiential Events powered by Alankaran"
+        title="Zylo Events — Corporate & Experiential Events powered by Alankaran"
         description="Zylo Events is the dedicated corporate and luxury experiential events wing of Alankaran. Specializing in high-end brand activations, corporate conferences, product launches, global MICE, trade shows, and experiential installations across India since 2011."
+        path="/"
+        schemaData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Zylo Events",
+            "url": "https://zylo.events",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://zylo.events/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]}
       />
 
       <main id="home">

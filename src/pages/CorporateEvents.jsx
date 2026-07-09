@@ -18,6 +18,25 @@ export default function CorporateEvents() {
       <SEO
         title="MICE, Corporate Conferences &amp; Brand Activations | Zylo Events"
         description="Zylo Events delivers premium MICE, corporate conferences, product launches, high-end trade shows, and experiential brand activations across India since 2011."
+        path="/corporate-events"
+        schemaData={[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zylo.events/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CorporateEvents",
+      "item": "https://zylo.events/corporate-events"
+    }
+  ]
+}]}
       />
 
       <main>

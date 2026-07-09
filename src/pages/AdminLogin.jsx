@@ -1,3 +1,4 @@
+import SEO from "../components/shared/SEO";
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
@@ -38,6 +39,7 @@ await signInWithEmailAndPassword(auth, email.trim(), password);
         padding: '40px'
       }}
     >
+      <SEO title="AdminLogin" noindex={true} />
       <div
         style={{
           width: '100%',

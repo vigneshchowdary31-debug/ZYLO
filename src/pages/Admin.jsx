@@ -1,3 +1,4 @@
+import SEO from "../components/shared/SEO";
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { signOut } from 'firebase/auth';
@@ -145,6 +146,7 @@ export default function Admin() {
 
   return (
     <div style={{ padding: '40px' }}>
+      <SEO title="Admin" noindex={true} />
       <button
         onClick={handleLogout}
         style={{
